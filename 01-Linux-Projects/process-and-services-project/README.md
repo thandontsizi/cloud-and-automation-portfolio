@@ -4,7 +4,7 @@ The objective of this project is to understand how Linux manages running program
 
 The project focuses on identifying active processes, understanding resource usage, and inspecting system-managed services in order to build foundational operational skills required for DevOps and Cloud Engineering roles.
 
-## Scope of the Project:
+## Scope of the Project
 In this project, I will:
 - Inspect running processes on a Linux system.
 - Observe CPU and memory usage.
