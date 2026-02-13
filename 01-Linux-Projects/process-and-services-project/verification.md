@@ -13,7 +13,7 @@ This document verifies that the processes and services tasks were completed usin
 - What I observed: Processes updated live with changing memory and CPU usage.
 - Why it matters: Helps identify perforamnce issues and resource-heavy processes.
 
-## 2. Service Status Verification:
+## 2. Service Status Verification
 - Command: systemctl status ssh
 - What I was verifying: Whether a service is running and is managed by systemd.
 - What I observed: The service was active and was running under systemd control.
