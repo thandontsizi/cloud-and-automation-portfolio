@@ -1,2 +1,5 @@
 reports/*
 !reports/sample_report.txt
+
+logs/*
+!logs/sample_log.txt

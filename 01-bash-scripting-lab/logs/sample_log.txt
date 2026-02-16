@@ -1,0 +1,10 @@
+[INFO] 2026-02-16 22:09:41 - Starting user provisioning for: labuser1 (sudo: false)
+[INFO] 2026-02-16 22:09:44 - User does not exist. Creating: labuser1
+[INFO] 2026-02-16 22:11:14 - User created successfully: labuser1
+[INFO] 2026-02-16 22:11:14 - Provisioning complete for: labuser1
+[INFO] 2026-02-16 22:20:56 - Starting user provisioning for: labuser2 (sudo: true)
+[INFO] 2026-02-16 22:20:56 - User does not exist. Creating: labuser2
+[INFO] 2026-02-16 22:21:42 - User created successfully: labuser2
+[INFO] 2026-02-16 22:21:42 - Adding user 'labuser2' to sudo group.
+[INFO] 2026-02-16 22:21:47 - User 'labuser2' added to sudo group.
+[INFO] 2026-02-16 22:21:47 - Provisioning complete for: labuser2
