@@ -15,28 +15,37 @@ These exercises reflect real operational tasks performed by a systems administra
 
 ## Projects in This Lab:
 ### 1. system-setup-project:
-Covers:
-- Initial system configuration.
+Initial system configuration:
 - User and group creation.
 - File permission management,
 - Directory structuring.
 ------------------------------
 
 ### 2. system-audit-project;
-Covers:
-- Inspecting system state.
+System state inspection:
 - Reviewing disk usage and memory.
 - Identifying misconfigurations.
 - Auditing system information.
 ----------------------------------
 
 ### 3. process-and-services-project:
-Covers:
+Operational management:
 - Managing system services (systemctl).
 - Monitoring running processes,
 - Identifying failed services.
 - Inspecting logs for troubleshooting.
 -------------------------------------
+
+### 4. Linux Operations Automation Project:
+Integrated operational automation:
+- Automated system diagnostics.
+- Service state verification.
+- Log inspection and filtering.
+- Structured reporting.
+- Optional corrective actions.
+
+This project consolidates concepts from the previous three projects into a single operational workflow.
+-------------------------------------------------------------------------------------------------------
 
 ## Skills Demonstrated:
 - Confident CLI usage.
