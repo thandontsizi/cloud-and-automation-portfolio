@@ -121,6 +121,49 @@ audit_recent_errors() {
 	fi
 }
 # ---------------------------------------------
+# ---- Fix Mode Per Service Confirmation ----
+confirm() {
+	#Usage: Confirm "Question?"
+	read -r -p "$1 [y/N]: " reply
+	case "$reply" in
+		y|Y|yes|YES) return 0 ;;
+		*) return 1 ;;
+	esac
+}
+
+fix_failed_services_interactive() {
+	section "Fix Mode: Failed Services (Interactive)"
+
+	if ! command -v systemctl >/dev/null 2>&1; then
+		echo "systemctl not available. Cannot restart services."
+		return 0
+	fi
+
+	# Grab failed service unit names (e.g., ssh.service)
+	mapfile -t failed_units < <(systemctl --failed --no-legend | awk '{print $1}')
+
+	if [ "${#failed_units[@]}" -eq 0 ]; then
+		echo "No failed services detected."
+		return 0
+	fi
+
+	echo "Failed Services Detected: "
+	printf ' - %s/n' "${failed_units[@]}"
+	echo
+
+	for unit in "${failed_units[@]}"; do
+		if confirm "Restart $unit?"; then
+			echo "Restarting $unit..."
+			sudo systemctl restart "$unit" || echo "Restart failed for $unit"
+			echo "Status after restart (brief): "
+			systemctl --no-pager --full status "$unit" | head -n 12 || true
+		else
+			echo "Skipped $unit"
+		fi
+		echo
+	done
+}
+# ---------------------------------------------
 # ---- Main ----
 require_sudo_if_fix_mode
 write_header
@@ -138,3 +181,7 @@ write_header
 # ---------------------------------------------
 
 echo "Report created: $report_file"
+
+if [ "fix_mode" = "true" ]; then
+	fix_failed_services_interactive
+fi
