@@ -1,0 +1,78 @@
+Linux Operations Report:
+Generated: Thu Feb 19 23:20:21 SAST 2026
+Mode: AUDIT ONLY
+Hostname: cRabS
+User: thando
+
+==== Uptime:  ====
+ 23:20:21 up  7:34,  0 users,  load average: 0.00, 0.02, 0.00
+
+==== Disk Usage:  ====
+Filesystem      Size  Used Avail Use% Mounted on
+none            1.9G     0  1.9G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2
+none            1.9G  4.0K  1.9G   1% /mnt/wsl
+drivers         931G  466G  466G  50% /usr/lib/wsl/drivers
+/dev/sdd        251G  3.6G  235G   2% /
+none            1.9G   92K  1.9G   1% /mnt/wslg
+none            1.9G     0  1.9G   0% /usr/lib/wsl/lib
+rootfs          1.9G  2.7M  1.9G   1% /init
+none            1.9G  828K  1.9G   1% /run
+none            1.9G     0  1.9G   0% /run/lock
+none            1.9G   28K  1.9G   1% /run/shm
+none            1.9G   76K  1.9G   1% /mnt/wslg/versions.txt
+none            1.9G   76K  1.9G   1% /mnt/wslg/doc
+C:\             931G  466G  466G  50% /mnt/c
+snapfuse         74M   74M     0 100% /snap/core22/2216
+snapfuse         74M   74M     0 100% /snap/core22/2292
+snapfuse         49M   49M     0 100% /snap/snapd/25935
+snapfuse        4.5M  4.5M     0 100% /snap/tree/54
+
+==== Memory Usage:  ====
+               total        used        free      shared  buff/cache   available
+Mem:           3.7Gi       378Mi       3.1Gi        14Mi       264Mi       3.2Gi
+Swap:          1.0Gi          0B       1.0Gi
+
+==== Top CPU Processes (Top 10):  ====
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         440  0.8  0.9 1694488 37944 ?       Ssl  15:48   4:03 /usr/lib/snapd/snapd
+root           1  0.0  0.2 165880 11264 ?        Ss   15:46   0:03 /sbin/init
+root           2  0.0  0.0   3120  2176 ?        Sl   15:46   0:00 /init
+root           6  0.0  0.0   3136  1800 ?        Sl   15:47   0:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+root          99  0.0  0.0   3124   900 ?        Ss   15:47   0:00 /init
+root         100  0.0  0.0   3140  1160 ?        S    15:47   0:02 /init
+thando       101  0.0  0.1   6308  5248 pts/0    Ss   15:47   0:00 -bash
+root         102  0.0  0.1   7476  4864 pts/1    Ss   15:47   0:00 /bin/login -f
+thando       221  0.0  0.1   6236  4992 pts/1    S+   15:47   0:00 -bash
+root         301  0.0  0.4  47872 16512 ?        S<s  15:48   0:09 /lib/systemd/systemd-journald
+
+==== Failed Services:  ====
+  UNIT                     LOAD   ACTIVE SUB    DESCRIPTION
+● landscape-client.service loaded failed failed Landscape client daemons
+
+LOAD   = Reflects whether the unit definition was properly loaded.
+ACTIVE = The high-level unit activation state, i.e. generalization of SUB.
+SUB    = The low-level unit activation state, values depend on unit type.
+1 loaded units listed.
+
+==== Recent System Errors (Last 20):  ====
+Feb 18 17:33:21 cRabS unknown: WSL (176) ERROR: CheckConnection: getaddrinfo() failed: -5
+Feb 18 17:31:58 cRabS systemd[1]: systemd-journald.service: Watchdog timeout (limit 3min)!
+-- Boot 95d9d2b3cef9419ebf30f4380fefd3c0 --
+Feb 18 18:45:20 cRabS kernel: PCI: Fatal: No config space access function found
+Feb 18 18:45:20 cRabS unknown: WSL (175) ERROR: CheckConnection: getaddrinfo() failed: -5
+Feb 18 18:45:20 cRabS unknown: WSL (2 - init-systemd(Ubuntu-22.04)) ERROR: WaitForBootProcess:3432: /sbin/init failed to start within 10000ms
+Feb 18 18:45:20 cRabS kernel: misc dxg: dxgk: dxgkio_is_feature_enabled: Ioctl failed: -22
+Feb 18 18:45:20 cRabS kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Feb 18 18:45:20 cRabS kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Feb 18 18:45:20 cRabS kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -22
+Feb 18 18:45:20 cRabS kernel: misc dxg: dxgk: dxgkio_query_adapter_info: Ioctl failed: -2
+Feb 18 18:45:20 cRabS unknown: WSL (2 - Interop) ERROR: CreateLoginSession:2766: Timed out waiting for user session for uid=1000
+Feb 18 18:47:46 cRabS systemd[1]: Failed to start Landscape client daemons.
+Feb 18 23:57:03 cRabS unknown: WSL (175) ERROR: CheckConnection: getaddrinfo() failed: -5
+Feb 19 04:05:50 cRabS unknown: WSL (175) ERROR: CheckConnection: getaddrinfo() failed: -5
+Feb 19 17:06:48 cRabS unknown: WSL (175) ERROR: CheckConnection: getaddrinfo() failed: -5
+Feb 19 20:22:10 cRabS unknown: WSL (175) ERROR: CheckConnection: getaddrinfo() failed: -5
+Feb 19 21:55:26 cRabS unknown: WSL (175) ERROR: CheckConnection: getaddrinfo() failed: -5
+Feb 19 22:56:44 cRabS sudo[2434]: pam_unix(sudo:auth): conversation failed
+Feb 19 22:56:44 cRabS sudo[2434]: pam_unix(sudo:auth): auth could not identify password for [thando]
+Feb 19 22:56:44 cRabS sudo[2434]:   thando : a password is required ; TTY=pts/0 ; PWD=/home/thando/infrastructure-engineering-projects/02-linux-system-administration-lab/04-linux-operations-automation-project ; USER=root ; COMMAND=/usr/bin/true
